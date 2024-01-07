@@ -75,36 +75,36 @@ const PostMenuComponent = ({menuOptions, isfollower, handleClick}) =>{
       >
         {menuOptions.map((option) => {
             switch (option) {
-                case EnumPostMenuOptions.report:
-                    return <MenuItem key={option} selected={option === menuOptions[0]} onClick={()=> handleClose(EnumPostMenuOptions.report)}>
-                            <ReportIcon/> {option}
+                case EnumPostMenuOptions.Report:
+                    return <MenuItem key={option} selected={option === menuOptions[0]} onClick={()=> handleClose(EnumPostMenuOptions.Report)}>
+                            <ReportIcon/>&nbsp; {option}
                     </MenuItem>
                 break;
 
-                case EnumPostMenuOptions.hide:
-                    return <MenuItem key={option} selected={option === menuOptions[0]} onClick={()=> handleClose(EnumPostMenuOptions.hide)}>
-                            <HideImageIcon/> {option}
+                case EnumPostMenuOptions.Hide:
+                    return <MenuItem key={option} selected={option === menuOptions[0]} onClick={()=> handleClose(EnumPostMenuOptions.Hide)}>
+                            <HideImageIcon/>&nbsp; {option}
                     </MenuItem>
                 break;
 
-                case EnumPostMenuOptions.follow:
-                    return <MenuItem key={option} selected={option === menuOptions[0]} onClick={()=> handleClose(EnumPostMenuOptions.follow)}>
+                case EnumPostMenuOptions.Follow:
+                    return <MenuItem key={option} selected={option === menuOptions[0]} onClick={()=> handleClose(EnumPostMenuOptions.Follow)}>
                                 {
-                                    (isfollower)?<Button variant="outlined" style={{height: "25px"}}>UnFollow</Button>:
-                                    <Button variant="contained" style={{height: "25px"}}>Follow</Button>
+                                    (isfollower)?<Button variant="outlined" style={{height: "25px",backgroundColor: "#fff", fontSize: "11px", margin: "0 auto", border: "1px solid 0ABCFF", color: "#000"}}>UnFollow</Button>:
+                                    <Button variant="contained" style={{height: "25px",backgroundColor: "#0ABCFF", fontSize: "11px", margin: "0 auto"}}>Follow</Button>
                                 }
                             </MenuItem>
                 break;
 
-                case EnumPostMenuOptions.edit:
-                    return <MenuItem key={option} selected={option === menuOptions[0]} onClick={()=> handleClose(EnumPostMenuOptions.edit)}>
-                            <EditIcon/> {option}
+                case EnumPostMenuOptions.Edit:
+                    return <MenuItem key={option} selected={option === menuOptions[0]} onClick={()=> handleClose(EnumPostMenuOptions.Edit)}>
+                            <EditIcon/>&nbsp; {option}
                     </MenuItem>
                 break;
 
-                case EnumPostMenuOptions.delete:
-                    return <MenuItem key={option} selected={option === menuOptions[0]} onClick={()=> handleClose(EnumPostMenuOptions.delete)}>
-                            <DeleteIcon/> {option}
+                case EnumPostMenuOptions.Delete:
+                    return <MenuItem key={option} selected={option === menuOptions[0]} onClick={()=> handleClose(EnumPostMenuOptions.Delete)}>
+                            <DeleteIcon/>&nbsp; {option}
                     </MenuItem>
                 break;
             }

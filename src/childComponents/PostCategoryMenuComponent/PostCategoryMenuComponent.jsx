@@ -9,15 +9,21 @@ import SettingsAccessibilityIcon from '@mui/icons-material/SettingsAccessibility
 import ManIcon from '@mui/icons-material/Man';
 import EnumPostCategory from '../enums/EnumPostCategory';
 import { IconButton, Menu, MenuItem } from '@mui/material';
+import { useDispatch } from 'react-redux';
+import EnumNavigate from '../../singletonControllers/NavigateController';
+import navigateItem from '../../actions/navigateItemAction';
+
+const iconStyle                 = { fontSize: '30px', color: "black" };
+const rediconStyle              = { fontSize: '30px', color: "red" };
 
 const PostCategoryMenuComponent = ({menuOptions, handleClick}) =>{
 
-    const ITEM_HEIGHT = 48;       
-    const [anchorEl, setAnchorEl] = useState(null);
-    const open = Boolean(anchorEl);
+    const dispatch                  = useDispatch();     
+    const [anchorEl, setAnchorEl]   = useState(null);
+    const open                      = Boolean(anchorEl);
     
     const handlemenuIconClick = (event) => {
-      setAnchorEl(event.currentTarget);
+        setAnchorEl(event.currentTarget);
     };
 
     const handleClose = (e, seletedmenuItem) => {
@@ -38,7 +44,7 @@ const PostCategoryMenuComponent = ({menuOptions, handleClick}) =>{
             aria-haspopup="true"
             onClick={handlemenuIconClick}
         >
-        <AddCircleIcon />
+        <AddCircleIcon style={(null === anchorEl)?iconStyle:rediconStyle} />
       </IconButton>
       <Menu id="long-menu" anchorEl={anchorEl}
                                   keepMounted open={open} onClose={handleClose}
@@ -53,7 +59,9 @@ const PostCategoryMenuComponent = ({menuOptions, handleClick}) =>{
                                 height: "20px", width: "100%", fontSize: "18px"
                                 }}>
                                 <span style={{alignItems: "left", width:"90%"}}>{option}</span>
-                                <span style={{alignItems: "left",width: "10%"}}><CoffeeIcon/></span>
+                                <span style={{alignItems: "left",width: "10%"}}>
+                                    <img src="/categoryImages/fitrecipes_category.svg" style={{width: "25px", height:"25px"}}/>
+                                </span>
                             </div>
                     </MenuItem>
                 break;
@@ -65,7 +73,9 @@ const PostCategoryMenuComponent = ({menuOptions, handleClick}) =>{
                                 height: "20px", width: "100%", fontSize: "18px"
                                 }}>
                                 <span style={{alignItems: "left", width:"90%"}}>{option}</span>
-                                <span style={{alignItems: "left",width: "10%"}}><FilterTwoToneIcon/></span>
+                                <span style={{alignItems: "left",width: "10%"}}>
+                                    <img src="/categoryImages/storyborad_category.svg" style={{width: "25px", height:"25px"}}/>
+                                </span>
                             </div>
                     </MenuItem>
                 break;
@@ -77,7 +87,9 @@ const PostCategoryMenuComponent = ({menuOptions, handleClick}) =>{
                                 height: "20px", width: "100%", fontSize: "18px"
                                 }}>
                                 <span style={{alignItems: "left", width:"90%"}}>{option}</span>
-                                <span style={{alignItems: "left",width: "10%"}}><FitnessCenterIcon/></span>
+                                <span style={{alignItems: "left",width: "10%"}}>
+                                    <img src="/categoryImages/fitnessProduct_category.svg" style={{width: "25px", height:"25px"}}/>
+                                </span>
                             </div>
                     </MenuItem>
                 break;
@@ -89,7 +101,9 @@ const PostCategoryMenuComponent = ({menuOptions, handleClick}) =>{
                                 height: "20px", width: "100%", fontSize: "18px"
                                 }}>
                                 <span style={{alignItems: "left", width:"90%"}}>{option}</span>
-                                <span style={{alignItems: "left",width: "10%"}}><SettingsAccessibilityIcon/></span>
+                                <span style={{alignItems: "left",width: "10%"}}>
+                                    <img src="/categoryImages/fitnessServicePost_category.svg" style={{width: "25px", height:"25px"}}/>
+                                </span>
                             </div>
                     </MenuItem>
                 break;
@@ -101,7 +115,9 @@ const PostCategoryMenuComponent = ({menuOptions, handleClick}) =>{
                                 height: "20px", width: "100%", fontSize: "18px"
                                 }}>
                                 <span style={{alignItems: "left", width:"90%"}}>{option}</span>
-                                <span style={{alignItems: "left",width: "10%"}}><ManIcon style={{fontSize: '25px'}}/></span>
+                                <span style={{alignItems: "left",width: "10%"}}>
+                                    <img src="/categoryImages/TransformationServices_category.svg" style={{width: "25px", height:"25px"}}/>
+                                </span>
                             </div>
                     </MenuItem>
                 break;

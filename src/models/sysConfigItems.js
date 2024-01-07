@@ -64,6 +64,10 @@ class SysConfigData{
     getlstofUsers(){
         return this.result.lstofusers;
     }
+
+    getlstofPostItems() {
+        return this.result.lstofpostsinfo;
+    }
 }
 
 export default SysConfigData;

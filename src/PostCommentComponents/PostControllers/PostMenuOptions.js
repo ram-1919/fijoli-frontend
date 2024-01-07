@@ -1,11 +1,11 @@
 
 
 const EnumPostMenuOptions = Object.freeze({
-    report         : "report",
-    hide           : "hide",
-    follow         : "follow",
-    edit           : "edit",
-    delete         : "delete"
+    Report         : "Report",
+    Hide           : "Hide",
+    Follow         : "Follow",
+    Edit           : "Edit",
+    Delete         : "Delete"
 })
 
 export default EnumPostMenuOptions;

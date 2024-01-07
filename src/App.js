@@ -20,7 +20,7 @@ import DisplayUsers from './tmpcomponents/DisplayUsers';
 // import ViewPostCommentComponent from './PostCommentComponents/ViewPostCommentComponent';
 // import ProfilepicSelectionComponent from './profilepiccontrols/ProfilepicSelectionComponent';
 // import PostCommentContainer from './PostCommentComponents/PostCommentContainer';
-// import LogoComponent from './logoComponent/LogoComponent';
+import LogoComponent from './logoComponent/LogoComponent';
 
 
 class App extends Component {

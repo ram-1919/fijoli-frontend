@@ -24,7 +24,7 @@ const LoginComponent = () => {
     const navigate                  =   useNavigate();
     const dispatch                  =   useDispatch();
     const [eyeValue, seteyeValue]   =   useState(false);
-    const [loginData, setloginData] =   useState({"whatsapp_number":"9845098451", "encrypted_password":"pk"});
+    const [loginData, setloginData] =   useState({"whatsapp_number":"9845098452", "encrypted_password":"m"});
     const [displaymsg, setdisplaymsg]       = useState({});
 
     const loginState                =   useSelector((state)=> state.storeComponent.loginState);
